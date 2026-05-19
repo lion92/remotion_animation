@@ -5,6 +5,7 @@ import App from "./App";
 import CodePresentation from "./presentation/CodePresentation";
 import TutorialVideo from "./presentation/TutorialVideo";
 import { StoryApp } from "./StoryApp";
+import { AstronautApp } from "./AstronautApp";
 
 export const RemotionRoot = () => {
     return (
@@ -53,6 +54,18 @@ export const RemotionRoot = () => {
                 component={StoryApp}
 
                 // 7200 frames = 5 minutes exactement (6 scènes × 1200 frames)
+                durationInFrames={7200}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="AstronautStory"
+                component={AstronautApp}
+
+                // 7200 frames = 5 minutes (6 scènes × 1200 frames)
                 durationInFrames={7200}
 
                 fps={24}
