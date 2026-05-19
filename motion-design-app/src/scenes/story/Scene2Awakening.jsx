@@ -1,6 +1,6 @@
-import { useCurrentFrame, interpolate } from 'remotion';
-import { LittleGuy } from '../../LittleGuy';
-import { Bubble } from '../../Bubble';
+import { useCurrentFrame, interpolate, Audio, staticFile } from 'remotion';
+import LittleGuy from '../../LittleGuy';
+import Bubble from '../../Bubble';
 import { Sun } from '../../components/Sun';
 import { Cloud } from '../../components/Cloud';
 import { FadeIn } from '../../components/FadeIn';
@@ -190,6 +190,11 @@ export const Scene2Awakening = () => {
       </div>
 
       {SUBS.map(({ text, s, e }, i) => <div key={i}>{renderSub(text, s, e)}</div>)}
+
+      {/* ── Audio ── */}
+      <Audio src={staticFile('audio/narration2.mp3')} startFrom={0} volume={1} />
+      <Audio src={staticFile('audio/music2.mp3')} startFrom={0} volume={0.22} />
+      <Audio src={staticFile('audio/keyboard.mp3')} startFrom={0} volume={0.12} />
     </div>
   );
 };

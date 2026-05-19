@@ -1,4 +1,4 @@
-import { useCurrentFrame, interpolate } from 'remotion';
+import { useCurrentFrame, interpolate, Audio, staticFile } from 'remotion';
 import { StarField } from '../../components/StarField';
 import { Moon } from '../../components/Moon';
 
@@ -243,6 +243,11 @@ export const Scene1Dream = () => {
       )}
 
       {SUBS.map(({ text, s, e }, i) => <div key={i}>{renderSub(text, s, e)}</div>)}
+
+      {/* ── Audio ── */}
+      <Audio src={staticFile('audio/narration1.mp3')} startFrom={0} volume={1} />
+      <Audio src={staticFile('audio/music1.mp3')} startFrom={0} volume={0.22} />
+      <Audio src={staticFile('audio/night_ambient.mp3')} startFrom={0} volume={0.18} />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { Composition } from "remotion";
 import App from "./App";
 import CodePresentation from "./presentation/CodePresentation";
 import TutorialVideo from "./presentation/TutorialVideo";
+import { StoryApp } from "./StoryApp";
 
 export const RemotionRoot = () => {
     return (
@@ -41,6 +42,18 @@ export const RemotionRoot = () => {
 
                 // 4660 frames = ~3 min 14s avec narration voix Paul
                 durationInFrames={4660}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="DevStory"
+                component={StoryApp}
+
+                // 7200 frames = 5 minutes exactement (6 scènes × 1200 frames)
+                durationInFrames={7200}
 
                 fps={24}
                 width={1920}

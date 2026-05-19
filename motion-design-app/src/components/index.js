@@ -40,6 +40,9 @@ export { Robot } from './Robot';
 export { Tree } from './Tree';
 export { House } from './House';
 
+// Astronomie
+export { Moon } from './Moon';
+
 // Formes & UI
 export { Loader } from './Loader';
 export { Countdown } from './Countdown';
