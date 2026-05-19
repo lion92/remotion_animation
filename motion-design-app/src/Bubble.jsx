@@ -1,37 +1,21 @@
-import { useCurrentFrame, useVideoConfig } from "remotion";
-
-export default function Bubble() {
-    const messages = [
-        "Bonjour 👋",
-        "Je marche !",
-        "React est génial 😎",
-        "Je suis un personnage animé 🎬",
-        "Je peux parler aussi 💬",
-    ];
-
-    const frame = useCurrentFrame();
-    const { fps } = useVideoConfig();
-
-    // change de message toutes les 2 secondes
-    const index = Math.floor(frame / (fps * 2)) % messages.length;
-    const floatY = Math.sin(frame * 0.1) * 5;
-
+export default function Bubble({ text }) {
     return (
         <div
             style={{
                 position: "absolute",
-                top: -120 + floatY,
-                left: 120,
+                top: 0,
+                left: 180,
                 background: "white",
                 padding: "20px",
                 borderRadius: "20px",
-                maxWidth: "280px",
+                maxWidth: "320px",
                 fontSize: "24px",
                 fontWeight: "bold",
                 boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+                zIndex: 1000,
             }}
         >
-            {messages[index]}
+            {text}
 
             {/* flèche */}
             <div

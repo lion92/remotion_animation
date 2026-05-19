@@ -2,19 +2,23 @@
 
 import { useCurrentFrame } from "remotion";
 
-export default function LittleGuy() {
+export default function LittleGuy({ lookingUp = false }) {
     const frame = useCurrentFrame();
 
-    // cycle de marche ralenti
+    // cycle de marche
     const walkCycle = frame * 0.06;
 
     // bras
     const armAngle =
-        Math.sin(walkCycle) * 25;
+        Math.sin(walkCycle) * 18;
 
     // jambes
     const legAngle =
-        Math.sin(walkCycle) * 25;
+        Math.sin(walkCycle) * 18;
+
+    // rotation tête
+    const headRotation =
+        lookingUp ? -20 : 0;
 
     return (
         <div
@@ -34,6 +38,9 @@ export default function LittleGuy() {
                     position: "absolute",
                     top: 0,
                     left: 60,
+
+                    transform: `rotate(${headRotation}deg)`,
+                    transformOrigin: "bottom center",
                 }}
             >
                 {/* œil gauche */}
@@ -44,8 +51,8 @@ export default function LittleGuy() {
                         height: 10,
                         borderRadius: "50%",
                         background: "black",
-                        top: 30,
-                        left: 20,
+                        top: lookingUp ? 20 : 30,
+                        left: 25,
                     }}
                 />
 
@@ -57,7 +64,7 @@ export default function LittleGuy() {
                         height: 10,
                         borderRadius: "50%",
                         background: "black",
-                        top: 30,
+                        top: lookingUp ? 20 : 30,
                         left: 50,
                     }}
                 />
