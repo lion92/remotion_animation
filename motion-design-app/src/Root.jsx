@@ -6,6 +6,9 @@ import CodePresentation from "./presentation/CodePresentation";
 import TutorialVideo from "./presentation/TutorialVideo";
 import { StoryApp } from "./StoryApp";
 import { AstronautApp } from "./AstronautApp";
+import { HtmlCssJsStory, HTML_CSS_JS_STORY_DURATION } from "./HtmlCssJsStory";
+import { JavaExplainer, JAVA_EXPLAINER_DURATION } from "./JavaExplainer";
+import { RpgCodingStory, RPG_CODING_STORY_DURATION } from "./RpgCodingStory";
 
 export const RemotionRoot = () => {
     return (
@@ -67,6 +70,41 @@ export const RemotionRoot = () => {
 
                 // 7200 frames = 5 minutes (6 scènes × 1200 frames)
                 durationInFrames={7200}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="HtmlCssJsStory"
+                component={HtmlCssJsStory}
+
+                // 6 scenes x 900 frames = 3 min 45 s
+                durationInFrames={HTML_CSS_JS_STORY_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="JavaExplainer"
+                component={JavaExplainer}
+
+                // 10 scenes x 720 frames = 5 minutes exactement (30s par scene)
+                durationInFrames={JAVA_EXPLAINER_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+            <Composition
+                id="RpgCodingStory"
+                component={RpgCodingStory}
+
+                // 12 scenes x 960 frames = 8 minutes exactes (40s par scène)
+                durationInFrames={RPG_CODING_STORY_DURATION}
 
                 fps={24}
                 width={1920}

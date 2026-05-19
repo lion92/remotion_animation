@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "render-server": "node render-server.mjs",
+    "studio": "remotion studio src/index.jsx"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.462",

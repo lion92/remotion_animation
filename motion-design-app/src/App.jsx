@@ -11,13 +11,9 @@ export default function App() {
     return (
         <>
             {/* scène 1 */}
-            <Sequence
-                from={0}
-                durationInFrames={240}
-            >
+            <Sequence from={0} durationInFrames={240} premountFor={1}>
                 <Scene1 />
             </Sequence>
-
             {/* scène 2 */}
             <Sequence
                 from={240}
@@ -25,7 +21,6 @@ export default function App() {
             >
                 <Scene2 />
             </Sequence>
-
             {/* scène 3 */}
             <Sequence
                 from={480}
@@ -33,12 +28,8 @@ export default function App() {
             >
                 <Scene3 />
             </Sequence>
-
             {/* scène 4 */}
-            <Sequence
-                from={720}
-                durationInFrames={240}
-            >
+            <Sequence from={720} durationInFrames={240}>
                 <Scene4 />
             </Sequence>
         </>
