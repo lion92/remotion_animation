@@ -12,12 +12,13 @@ if (!existsSync(path.join(__dirname, "out"))) {
 }
 
 const COMPOSITIONS = [
-  { id: "RpgCodingStory", label: "Mini RPG Tutorial",  duration: "8 min",   accent: "#f43f5e" },
-  { id: "JavaExplainer",  label: "Java Explainer",      duration: "5 min",   accent: "#f97316" },
-  { id: "HtmlCssJsStory", label: "HTML/CSS/JS Story",   duration: "3 min 45", accent: "#38bdf8" },
-  { id: "DevStory",       label: "Dev Story",           duration: "5 min",   accent: "#a78bfa" },
-  { id: "AstronautStory", label: "Astronaut Story",     duration: "5 min",   accent: "#22d3ee" },
-  { id: "Cartoon",        label: "Cartoon",             duration: "40 s",    accent: "#fbbf24" },
+  { id: "MiniRpgCodeurV2", label: "Mini RPG Codeur V2", duration: "8 min",    accent: "#a78bfa" },
+  { id: "RpgCodingStory",  label: "Mini RPG Tutorial",  duration: "8 min",    accent: "#f43f5e" },
+  { id: "JavaExplainer",   label: "Java Explainer",     duration: "5 min",    accent: "#f97316" },
+  { id: "HtmlCssJsStory",  label: "HTML/CSS/JS Story",  duration: "3 min 45", accent: "#38bdf8" },
+  { id: "DevStory",        label: "Dev Story",          duration: "5 min",    accent: "#a78bfa" },
+  { id: "AstronautStory",  label: "Astronaut Story",    duration: "5 min",    accent: "#22d3ee" },
+  { id: "Cartoon",         label: "Cartoon",            duration: "40 s",     accent: "#fbbf24" },
 ];
 
 function stripAnsi(s) {

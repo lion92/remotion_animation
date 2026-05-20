@@ -9,6 +9,7 @@ import { AstronautApp } from "./AstronautApp";
 import { HtmlCssJsStory, HTML_CSS_JS_STORY_DURATION } from "./HtmlCssJsStory";
 import { JavaExplainer, JAVA_EXPLAINER_DURATION } from "./JavaExplainer";
 import { RpgCodingStory, RPG_CODING_STORY_DURATION } from "./RpgCodingStory";
+import { MiniRpgCodeurV2, MINI_RPG_V2_DURATION } from "./MiniRpgCodeurV2";
 
 export const RemotionRoot = () => {
     return (
@@ -105,6 +106,18 @@ export const RemotionRoot = () => {
 
                 // 12 scenes x 960 frames = 8 minutes exactes (40s par scène)
                 durationInFrames={RPG_CODING_STORY_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="MiniRpgCodeurV2"
+                component={MiniRpgCodeurV2}
+
+                // 8 min: intro + 6 scenes code + demo + 3 améliorations + outro
+                durationInFrames={MINI_RPG_V2_DURATION}
 
                 fps={24}
                 width={1920}
