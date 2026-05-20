@@ -10,6 +10,7 @@ import { HtmlCssJsStory, HTML_CSS_JS_STORY_DURATION } from "./HtmlCssJsStory";
 import { JavaExplainer, JAVA_EXPLAINER_DURATION } from "./JavaExplainer";
 import { RpgCodingStory, RPG_CODING_STORY_DURATION } from "./RpgCodingStory";
 import { MiniRpgCodeurV2, MINI_RPG_V2_DURATION } from "./MiniRpgCodeurV2";
+import { JavaRpgTutoriel, JAVA_RPG_DURATION } from "./JavaRpgTutoriel";
 
 export const RemotionRoot = () => {
     return (
@@ -118,6 +119,18 @@ export const RemotionRoot = () => {
 
                 // 8 min: intro + 6 scenes code + demo + 3 améliorations + outro
                 durationInFrames={MINI_RPG_V2_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="JavaRpgTutoriel"
+                component={JavaRpgTutoriel}
+
+                // 8 min: intro + 6 scènes Java + demo terminal + 3 améliorations POO + outro
+                durationInFrames={JAVA_RPG_DURATION}
 
                 fps={24}
                 width={1920}
