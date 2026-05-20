@@ -11,6 +11,9 @@ import { JavaExplainer, JAVA_EXPLAINER_DURATION } from "./JavaExplainer";
 import { RpgCodingStory, RPG_CODING_STORY_DURATION } from "./RpgCodingStory";
 import { MiniRpgCodeurV2, MINI_RPG_V2_DURATION } from "./MiniRpgCodeurV2";
 import { JavaRpgTutoriel, JAVA_RPG_DURATION } from "./JavaRpgTutoriel";
+import { GeoEspaceTerminal, GEO_ESPACE_DURATION } from "./GeoEspaceTerminal";
+import { JavaRpgTutoriel2, JAVA_RPG2_DURATION } from "./JavaRpgTutoriel2";
+import GeoEspaceTerminal3, { GEO_ESPACE3_DURATION } from "./GeoEspaceTerminal3";
 
 export const RemotionRoot = () => {
     return (
@@ -131,6 +134,41 @@ export const RemotionRoot = () => {
 
                 // 8 min: intro + 6 scènes Java + demo terminal + 3 améliorations POO + outro
                 durationInFrames={JAVA_RPG_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="GeoEspaceTerminal"
+                component={GeoEspaceTerminal}
+
+                // 8 min: intro + 6 scènes géométrie 3D + demo pyramide + 3 améliorations + outro
+                durationInFrames={GEO_ESPACE_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+            <Composition
+                id="JavaRpgTutoriel2"
+                component={JavaRpgTutoriel2}
+
+                // 8 min : intro + 6 scènes Java avancé + demo + 3 patterns + outro
+                durationInFrames={JAVA_RPG2_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="GeoEspaceTerminal3"
+                component={GeoEspaceTerminal3}
+
+                // 15 min : symétrie, distance droite, plan 3pts, sections, tétraèdre, optimisation, barycentre, plan médiateur, lieux géo
+                durationInFrames={GEO_ESPACE3_DURATION}
 
                 fps={24}
                 width={1920}
