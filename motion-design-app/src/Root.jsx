@@ -14,6 +14,8 @@ import { JavaRpgTutoriel, JAVA_RPG_DURATION } from "./JavaRpgTutoriel";
 import { GeoEspaceTerminal, GEO_ESPACE_DURATION } from "./GeoEspaceTerminal";
 import { JavaRpgTutoriel2, JAVA_RPG2_DURATION } from "./JavaRpgTutoriel2";
 import GeoEspaceTerminal3, { GEO_ESPACE3_DURATION } from "./GeoEspaceTerminal3";
+import PhysiqueTerminale, { PHYSIQUE_TERMINALE_DURATION } from "./PhysiqueTerminale";
+import ListesChainees, { LISTES_CHAINEES_DURATION } from "./ListesChainees";
 
 export const RemotionRoot = () => {
     return (
@@ -170,6 +172,26 @@ export const RemotionRoot = () => {
                 // 15 min : symétrie, distance droite, plan 3pts, sections, tétraèdre, optimisation, barycentre, plan médiateur, lieux géo
                 durationInFrames={GEO_ESPACE3_DURATION}
 
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+
+            <Composition
+                id="PhysiqueTerminale"
+                component={PhysiqueTerminale}
+
+                // ~15min 30s : Newton, Projectile, Énergie, Oscillateur, RC, Optique, Ondes, Young, Quantique, Relativité
+                durationInFrames={PHYSIQUE_TERMINALE_DURATION}
+
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+            <Composition
+                id="ListesChainees"
+                component={ListesChainees}
+                durationInFrames={LISTES_CHAINEES_DURATION}
                 fps={24}
                 width={1920}
                 height={1080}
