@@ -16,6 +16,7 @@ import { JavaRpgTutoriel2, JAVA_RPG2_DURATION } from "./JavaRpgTutoriel2";
 import GeoEspaceTerminal3, { GEO_ESPACE3_DURATION } from "./GeoEspaceTerminal3";
 import PhysiqueTerminale, { PHYSIQUE_TERMINALE_DURATION } from "./PhysiqueTerminale";
 import ListesChainees, { LISTES_CHAINEES_DURATION } from "./ListesChainees";
+import { ParisChercheur, PARIS_CHERCHEUR_DURATION } from "./ParisChercheur";
 
 export const RemotionRoot = () => {
     return (
@@ -192,6 +193,17 @@ export const RemotionRoot = () => {
                 id="ListesChainees"
                 component={ListesChainees}
                 durationInFrames={LISTES_CHAINEES_DURATION}
+                fps={24}
+                width={1920}
+                height={1080}
+            />
+            <Composition
+                id="ParisChercheur"
+                component={ParisChercheur}
+
+                // 6 scènes × 1200 frames = 5 minutes — Léa arrive à Paris et devient chercheuse
+                durationInFrames={PARIS_CHERCHEUR_DURATION}
+
                 fps={24}
                 width={1920}
                 height={1080}

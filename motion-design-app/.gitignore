@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated video output
+out/
+
+# Claude internal config
+.claude/
